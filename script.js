@@ -17,12 +17,17 @@
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = prompt("Rock, Paper or Scissors?")
+  if (playerSelection === null || playerSelection === "") {
+    alert("Game cancelled")
+    return
+  }
+
   playerSelection = playerSelection.toLowerCase();
-  if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
+  if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+
+  } else {
     alert("Incorrect Entry. Please type only \"Rock\", \"Paper\" or \"Scissors\".")
     playRound();
-  } else {
-
   }
 
   computerSelection = Math.floor(Math.random() * 3)
