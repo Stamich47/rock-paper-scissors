@@ -18,6 +18,7 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection, computerSelection) {
+  
   computerSelection = getComputerChoice();
   let computerSelectionLow = computerSelection.toLowerCase();
   console.log(computerSelection);
