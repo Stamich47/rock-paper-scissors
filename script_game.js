@@ -1,16 +1,35 @@
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
+const container = document.getElementById('container');
+const buttons = document.getElementById('buttons');
+
 function getComputerChoice() {
   let cpu = Math.floor(Math.random() * 3);
   if (cpu > 1) {
     cpu = 'Rock';
-    return cpu;
   } else if (cpu < 1) {
     cpu = 'Paper';
-    return cpu;
   } else {
     cpu = 'Scissors';
-    return cpu;
+  }
+  return cpu;
+}
+
+function gameResults(e) {
+  const cpuChoice = getComputerChoice();
+  const playUpperCase =
+    e.target.id.charAt(0).toUpperCase() + e.target.id.slice(1);
+  if (playUpperCase === cpuChoice) {
+    console.log(
+      `Player has ${playUpperCase}. Opponent has ${cpuChoice}. It's a tie!!`
+    );
+  } else {
+    console.log('Oops.');
   }
 }
+
+buttons.addEventListener('click', gameResults);
 
 function playRound(playerSelection, computerSelection) {
   computerSelection = getComputerChoice();
@@ -37,7 +56,8 @@ function playRound(playerSelection, computerSelection) {
   }
 
   if (computerSelectionLow === 'scissors' && playerSelection === 'rock') {
-    console.log('Player chooses Rock, Computer chooses Scissors');
+    console.loplayGame();
+    g('Player chooses Rock, Computer chooses Scissors');
     console.log('Player Wins!');
   } else if (computerSelectionLow === 'paper' && playerSelection === 'rock') {
     console.log('Player chooses Rock, Computer chooses Paper');
@@ -68,13 +88,3 @@ function playRound(playerSelection, computerSelection) {
     console.log("It's a Tie!");
   }
 }
-
-function playGame() {
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-}
-
-playGame();
