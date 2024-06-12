@@ -97,7 +97,7 @@ function gameResults(e) {
       imageRight.src = './images/paper-right.png';
     }
     buttons.addEventListener('click', gameResults);
-  }, 2550);
+  }, 2500);
 }
 
 buttons.addEventListener('click', gameResults);
