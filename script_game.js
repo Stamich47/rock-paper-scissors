@@ -24,8 +24,18 @@ function gameResults(e) {
     console.log(
       `Player has ${playUpperCase}. Opponent has ${cpuChoice}. It's a tie!!`
     );
+  } else if (
+    (playUpperCase === 'Rock' && cpuChoice === 'Scissors') ||
+    (playUpperCase === 'Scissors' && cpuChoice === 'Paper') ||
+    (playUpperCase === 'Paper' && cpuChoice === 'Rock')
+  ) {
+    console.log(
+      `Player has ${playUpperCase}. Opponent has ${cpuChoice}. Player Wins!`
+    );
   } else {
-    console.log('Oops.');
+    console.log(
+      `Player has ${playUpperCase}. Opponent has ${cpuChoice}. Opponent Wins :(`
+    );
   }
 }
 
