@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock, Paper, Scissors Project </title>
-</head>
-<body>
-<script src="script_game.js"></script>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock, Paper, Scissors Project</title>
+  </head>
+  <body>
+    <h2>ROCK, PAPER, SCISSORS</h2>
+    <div id="container">
+      <h3>Player Selection</h3>
+      <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+      <div id="game">
+        <div class="player-box">
+          <img class="left-img" src="./images/rock-left.png" />
+          <p>Player</p>
+          <div class="player-score">0</div>
+        </div>
+        <div class="opponent-box">
+          <img class="right-img" src="./images/rock-right.png" />
+          <p>Computer</p>
+          <div class="cpu-score">0</div>
+        </div>
+      </div>
+      <div class="game-text">_</div>
+    </div>
+    <p class="img-cred">
+      <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors"
+        >Image Credit</a
+      >
+    </p>
+
+    <script src="script_game.js"></script>
+  </body>
 </html>
