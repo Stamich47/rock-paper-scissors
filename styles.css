@@ -59,3 +59,20 @@ img {
   margin-left: 40px;
   margin-right: 40px;
 }
+
+.btn-style {
+  background-color: rgb(248, 248, 248);
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+
+.btn-style:hover {
+  background-color: rgb(238, 238, 238);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-style:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
